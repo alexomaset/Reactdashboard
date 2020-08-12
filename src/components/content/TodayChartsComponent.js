@@ -3,6 +3,7 @@ import { Column, Row } from 'simple-flexbox';
 import { StyleSheet, css } from 'aphrodite';
 import LineChart from 'react-svg-line-chart'
 
+
 const data = []
 
 for (let x = 1; x <= 24; x++) {
@@ -114,13 +115,13 @@ class TodayChartsComponent extends React.Component {
 
     render() {
         return (
-            <Row flexGrow={1} className={css(styles.container)}
+            <Row flexGrow={2} className={css(styles.container)}
                 horizontal="center" breakpoints={{ 1024: 'column' }}>
                 <Column wrap flexGrow={7} flexBasis="735px" className={css(styles.graphSection)}
                     breakpoints={{ 1024: { width: 'calc(100% - 48px)', flexBasis: 'auto' } }}>
                     <Row wrap horizontal="space-between">
                         <Column>
-                            <span className={css(styles.graphTitle)}>Sales Overview</span>
+                            <span className={css(styles.graphTitle)}>Summary</span>
                             <span className={css(styles.graphSubtitle)}>as of 26 May 2020, 09:41 PM</span>
                         </Column>
                         {this.renderLegend('#3751FF', 'Today')}
@@ -136,10 +137,10 @@ class TodayChartsComponent extends React.Component {
                     </div>
                 </Column>
                 <Column className={css(styles.separator)} breakpoints={{ 1024: { display: 'none' } }}><div /></Column>
-                <Column flexGrow={3} flexBasis="342px" breakpoints={{ 1024: css(styles.stats) }}>
+                {/* <Column flexGrow={3} flexBasis="342px" breakpoints={{ 1024: css(styles.stats) }}>
                     {this.renderStat('Resolved', '449')}
                     {this.renderStat('Received', '426')}
-                </Column>
+                </Column> */}
             </Row>
         );
     }

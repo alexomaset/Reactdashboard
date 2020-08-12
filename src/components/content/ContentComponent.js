@@ -50,8 +50,9 @@ function ContentComponent() {
         <Column>
             <Row className={css(styles.cardsContainer)} wrap flexGrow={1} horizontal="space-between" breakpoints={{ 768: 'column' }}>
                 <Row className={css(styles.cardRow)} wrap flexGrow={1} horizontal="space-between" breakpoints={{ 384: 'column' }}>
-                    <MiniCardComponent className={css(styles.miniCardContainer)} title="Todays Expenses" value="$8500" />
-                    <MiniCardComponent className={css(styles.miniCardContainer)} title="Income Detail" value="$7800" />
+                    <MiniCardComponent className={css(styles.miniCardContainer)} title="Revenue" value="$1000000" />
+                    <MiniCardComponent className={css(styles.miniCardContainer)} title="Customers" value="$100" />
+                    <MiniCardComponent className={css(styles.miniCardContainer)} title="Transactions" value="$1000" />
                 </Row>
             </Row>
             <div className={css(styles.todayTrends)}>

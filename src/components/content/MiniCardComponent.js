@@ -2,7 +2,7 @@ import React from 'react';
 import { Column } from 'simple-flexbox';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import '@grapecity/wijmo.styles/wijmo.css';
-import * as wjGauge from '@grapecity/wijmo.react.gauge';
+// import * as wjGauge from '@grapecity/wijmo.react.gauge';
 
 
 const styles = StyleSheet.create({
@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
         borderRadius: 4,
         cursor: 'pointer',
         height: 200,
-        maxWidth: 5000,
+        maxWidth: 3000,
         padding: '24px 32px 24px 32px',
         ':hover': {
             borderColor: '#3751FF',

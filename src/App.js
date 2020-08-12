@@ -1,51 +1,50 @@
 import React from 'react';
-import { Column, Row } from 'simple-flexbox';
-import { StyleSheet, css } from 'aphrodite';
-import SidebarComponent from './components/sidebar/SidebarComponent';
-import HeaderComponent from './components/header/HeaderComponent';
-import ContentComponent from './components/content/ContentComponent';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 
-const styles = StyleSheet.create({
-    container: {
-        height: '100%',
-        minHeight: '100vh'
-    },
-    content: {
-        marginTop: 54
-    },
-    mainBlock: {
-        backgroundColor: '#F7F8FC',
-        padding: 30
-    }
-});
+import Dashboard from './components/Dashboard/Dashboard';
+import Login from './components/Login/Login';
+import jwt_decode from 'jwt-decode';
+// import ProtectedRoute from "./components/PrivateRoute";
+// import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+
 
 class App extends React.Component {
-
-    state = { selectedItem: 'Sales' };
-
-    componentDidMount() {
-        window.addEventListener('resize', this.resize);
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.resize);
-    }
-
-    resize = () => this.forceUpdate();
+  
 
     render() {
-        const { selectedItem } = this.state;
+      const token = localStorage.getItem('token');
+
+      let email = false;
+      let client_id = false;
+      let user_id = false;
+      let dashboard_id = false;
+
+      if(token) {
+          const userInfo = jwt_decode(token);
+          email = userInfo.identity.email;
+          client_id = userInfo.identity.client_id;
+          user_id  = userInfo.identity.user_id ;
+      }
+
+        console.log(email, client_id, user_id, dashboard_id);
+
         return (
-            <Row className={css(styles.container)}>
-                <SidebarComponent selectedItem={selectedItem} onChange={(selectedItem) => this.setState({ selectedItem })} />
-                <Column flexGrow={1} className={css(styles.mainBlock)}>
-                    <HeaderComponent title={selectedItem} />
-                    <div className={css(styles.content)}>
-                        <ContentComponent />
-                    </div>
-                </Column>
-            </Row>
+            <BrowserRouter>
+            <div className="App">
+
+              <div className="app">
+                <br />
+                <Switch>
+                  <Route exact path="/" component={Login} />
+                  {(!token || dashboard_id || !email || !client_id || !user_id) ? 
+                  <Route exact path="/" component={Login} /> :
+                  <Route exact path="/dashboard" component={Dashboard} />}
+</Switch>
+</div>
+</div>
+</BrowserRouter>
         );
     }
 }
