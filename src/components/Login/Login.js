@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from "axios";
+import { Jumbotron } from "react-bootstrap";
 
 class Login extends React.Component {
     constructor()
@@ -27,9 +28,11 @@ render() {
     console.log(localStorage.getItem("token"));
 
     return (
-        <form>
+        <form className="w-25 mx-auto">
             <h3>Sign In</h3>
-         <div class='form-group'>
+         <div className='Container'>
+             <Jumbotron>
+         <div className='form-group'>
             <label>Email address</label>
             <input type="email" className="form-control" placeholder="Enter email" onChange={(event)=>{this.setState({email:event.target.value})}} /> 
           </div>
@@ -45,6 +48,8 @@ render() {
                 </div>
             <div>
             <button type="submit" className='btn btn-primary btn-block' onClick={()=>{this.login()}} >Login</button>
+        </div>
+        </Jumbotron>
         </div>
         </form>
     );

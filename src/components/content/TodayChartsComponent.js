@@ -128,7 +128,7 @@ class TodayChartsComponent extends React.Component {
                                  <ButtonGroup size="lg" className="mb-2">
                                     <Button>Revenue</Button>
                                     <Button>Customers</Button>
-                                    <Button>Treansactions</Button>
+                                    <Button>Transactions</Button>
                                     </ButtonGroup> 
                                 </div>
                             <span className={css(styles.graphSubtitle)}>as of 26 May 2020, 09:41 PM</span>

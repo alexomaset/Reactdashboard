@@ -32,8 +32,7 @@ class App extends React.Component {
         return (
             <BrowserRouter>
             <div className="App">
-
-              <div className="app">
+        
                 <br />
                 <Switch>
                   <Route exact path="/" component={Login} />
@@ -41,7 +40,6 @@ class App extends React.Component {
                   <Route exact path="/" component={Login} /> :
                   <Route exact path="/dashboard" component={Dashboard} />}
 </Switch>
-</div>
 </div>
 </BrowserRouter>
         );
