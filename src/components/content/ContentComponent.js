@@ -6,6 +6,7 @@ import TodayTrendsComponent from './TodayChartsComponent';
 import TasksComponent from './TasksComponent';
 
 
+
 const styles = StyleSheet.create({
     cardsContainer: {
         marginRight: -30,

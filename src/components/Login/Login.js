@@ -27,8 +27,9 @@ render() {
     console.log(localStorage.getItem("token"));
 
     return (
-    <div>
-        <div className='form-group'>
+        <form>
+            <h3>Sign In</h3>
+         <div class='form-group'>
             <label>Email address</label>
             <input type="email" className="form-control" placeholder="Enter email" onChange={(event)=>{this.setState({email:event.target.value})}} /> 
           </div>
@@ -43,9 +44,9 @@ render() {
                     </div>
                 </div>
             <div>
-            <button onClick={()=>{this.login()}} >Login</button>
+            <button type="submit" className='btn btn-primary btn-block' onClick={()=>{this.login()}} >Login</button>
         </div>
-    </div>
+        </form>
     );
 }
 }
