@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-# Host react application on Apache server
-## Step 1 : Create your app
+# Host this react application on Apache server
+## Step 1 : Create app/clone app
 $ npm install -g create-react-app 
 $ create-react-app my-app
 ## Step 2 : Build it for production

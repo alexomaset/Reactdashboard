@@ -30,11 +30,18 @@ render() {
     <div>
         <div className='form-group'>
             <label>Email address</label>
-            <input type="email" onChange={(event)=>{this.setState({email:event.target.value})}} /> 
+            <input type="email" className="form-control" placeholder="Enter email" onChange={(event)=>{this.setState({email:event.target.value})}} /> 
           </div>
           <div className='form-group'>
-            <input type="text" onChange={(event)=>{this.setState({password:event.target.value})}} /> 
+            <label>Password</label>
+            <input type="password" className="form-control" placeholder="Enter password" onChange={(event)=>{this.setState({password:event.target.value})}} /> 
             </div>
+            <div className="form-group">
+                    <div className="custom-control custom-checkbox">
+                        <input type="checkbox" className="custom-control-input" id="customCheck1" />
+                        <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
+                    </div>
+                </div>
             <div>
             <button onClick={()=>{this.login()}} >Login</button>
         </div>

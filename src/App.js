@@ -5,8 +5,7 @@ import './App.css';
 import Dashboard from './components/Dashboard/Dashboard';
 import Login from './components/Login/Login';
 import jwt_decode from 'jwt-decode';
-// import ProtectedRoute from "./components/PrivateRoute";
-// import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 
 

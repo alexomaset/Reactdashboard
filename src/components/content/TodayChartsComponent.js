@@ -2,7 +2,9 @@ import React from 'react';
 import { Column, Row } from 'simple-flexbox';
 import { StyleSheet, css } from 'aphrodite';
 import LineChart from 'react-svg-line-chart'
-
+import { Button } from 'react-bootstrap';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import Dropdown from 'react-bootstrap/Dropdown';
 
 const data = []
 
@@ -122,9 +124,25 @@ class TodayChartsComponent extends React.Component {
                     <Row wrap horizontal="space-between">
                         <Column>
                             <span className={css(styles.graphTitle)}>Summary</span>
+                             <div> 
+                                 <ButtonGroup size="lg" className="mb-2">
+                                    <Button>Revenue</Button>
+                                    <Button>Customers</Button>
+                                    <Button>Treansactions</Button>
+                                    </ButtonGroup> 
+                                </div>
                             <span className={css(styles.graphSubtitle)}>as of 26 May 2020, 09:41 PM</span>
                         </Column>
                         {this.renderLegend('#3751FF', 'Today')}
+                        <div><Dropdown as={ButtonGroup}>
+    <Dropdown.Toggle id="dropdown-custom-1">Days</Dropdown.Toggle>
+    <Dropdown.Menu className="super-colors">
+      <Dropdown.Item eventKey="1">30 days</Dropdown.Item>
+      <Dropdown.Item eventKey="2">90 days</Dropdown.Item>
+      <Dropdown.Item eventKey="3">180 days</Dropdown.Item>
+      <Dropdown.Item eventKey="4">365 days</Dropdown.Item>
+    </Dropdown.Menu>
+  </Dropdown>{' '}</div>
                     </Row>
                     <div className={css(styles.graphContainer)}>
                         <LineChart
