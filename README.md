@@ -20,17 +20,15 @@ This is an application that graphs data based on the summary of transactions col
 ### Project Setup instructions
 Use the following commands to use this project.
 - git clone 
-- install `python 3.6`
-- Install [Postgresql](https://www.postgresql.org/download/)
+- install `React`
 - cd Dashboard
-- Navigate to the virtual environment using `source virtual/bin/activate`
 - `atom .`  //For those using atom text editor.
 - `code .`  //For those using Visual Studio editor.
 
 ### Install dependancies
 Install dependancies that will create an environment for the app to run `npm install`
 
-### Create the Database
+### Run the application
 ```
 CREATE DATABASE <preferred name>
 - Run yarn start
