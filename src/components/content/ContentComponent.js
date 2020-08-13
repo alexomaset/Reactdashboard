@@ -2,9 +2,9 @@ import React from 'react';
 import { Column, Row } from 'simple-flexbox';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import MiniCardComponent from './MiniCardComponent';
-import TodayTrendsComponent from './TodayChartsComponent';
+// import TodayTrendsComponent from './TodayChartsComponent';
 import TasksComponent from './TasksComponent';
-
+import Linechart from './LineChart';
 
 
 const styles = StyleSheet.create({
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
             maxWidth: 'none'
         }
     },
-    todayTrends: {
+    lineChart: {
         marginTop: 30
     },
     lastRow: {
@@ -56,9 +56,13 @@ function ContentComponent() {
                     <MiniCardComponent className={css(styles.miniCardContainer)} title="Transactions" value="$1000" />
                 </Row>
             </Row>
-            <div className={css(styles.todayTrends)}>
+            {/* <div className={css(styles.todayTrends)}>
                 <TodayTrendsComponent />
+            </div> */}
+            <div className={css(styles.lineChart)}>
+                <Linechart />
             </div>
+
             <Row horizontal="space-between" className={css(styles.lastRow)} breakpoints={{ 1024: 'column' }}>
                 <TasksComponent containerStyles={styles.tasks} />
             </Row>

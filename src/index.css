@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 body {
-  background: #1C8EF9 !important;
   min-height: 100vh;
   display: flex;
   font-weight: 400;
@@ -46,28 +45,4 @@ body, html, .App, #root, .auth-wrapper {
 .auth-wrapper .form-control:focus {
   border-color: #167bff;
   box-shadow: none;
-}
-
-.auth-wrapper h3 {
-  text-align: center;
-  margin: 0;
-  line-height: 1;
-  padding-bottom: 20px;
-}
-
-.custom-control-label {
-  font-weight: 400;
-}
-
-.forgot-password,
-.forgot-password a {
-  text-align: right;
-  font-size: 13px;
-  padding-top: 10px;
-  color: #7f7d7d;
-  margin: 0;
-}
-
-.forgot-password a {
-  color: #167bff;
 }

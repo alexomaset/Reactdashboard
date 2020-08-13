@@ -47,7 +47,7 @@ render() {
                     </div>
                 </div>
             <div>
-            <button type="submit" className='btn btn-primary btn-block' onClick={()=>{this.login()}} >Login</button>
+            <button onClick={()=>{this.login()}} >Login</button>
         </div>
         </Jumbotron>
         </div>
